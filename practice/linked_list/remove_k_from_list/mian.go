@@ -1,4 +1,4 @@
-package main
+package remove_k_from_list
 
 type ListNode struct {
 	Value interface{}
