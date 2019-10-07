@@ -8,9 +8,10 @@ type ListNode struct {
 }
 
 func main() {
-	data := []int{1, 2, 3, 4, 5}
+	data := []int{1000000000, -849483855, -1000000000, 376365554, -847904832}
+
 	//data := []int{1, 2, 3}
-	k := 2
+	k := 4
 
 	r := reverseNodesInKGroups(buildList(data), k)
 
@@ -29,7 +30,7 @@ func reverseNodesInKGroups(head *ListNode, k int) *ListNode {
 		start := current.Next
 		end := current.Next
 
-		for i := 1; i < k; i++ {
+		for i := 1; i < k && end != nil; i++ {
 			end = end.Next
 		}
 

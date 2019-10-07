@@ -52,6 +52,26 @@ func TestReverseNodeInKGroups(t *testing.T) {
 				},
 			},
 		},
+		{
+			in: []int{1000000000, -849483855, -1000000000, 376365554, -847904832},
+			k:  4,
+			result: &ListNode{
+				Value: 376365554,
+				Next: &ListNode{
+					Value: -1000000000,
+					Next: &ListNode{
+						Value: -849483855,
+						Next: &ListNode{
+							Value: 1000000000,
+							Next: &ListNode{
+								Value: -847904832,
+								Next:  nil,
+							},
+						},
+					},
+				},
+			},
+		},
 	}
 
 	for _, tc := range testCases {
